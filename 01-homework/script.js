@@ -1,14 +1,14 @@
-const dress = 15.678;
-const shirt = 123.965;
-const vest = 90.2345;
+const DRESS = 15.678;
+const SHIRT = 123.965;
+const VEST = 90.2345;
 
-let allProducts = [ dress, shirt, vest ];
+let allProducts = [ DRESS, SHIRT, VEST ];
 
-let maxNumber = Math.max(dress, shirt, vest);
+let maxNumber = Math.max(DRESS, SHIRT, VEST);
 console.log(maxNumber);
 
 
-let minNumber = Math.min(dress, shirt, vest);
+let minNumber = Math.min(DRESS, SHIRT, VEST);
 console.log(minNumber);
 
 
@@ -26,8 +26,9 @@ for ( i = 0; i < allProducts.length; i++) {
 
 console.log(sumIntegerProducts);
 
-let devisionSumInteger = sumIntegerProducts / 1000;
-let roundingToHundredths= devisionSumInteger.toFixed(1) * 1000;
+
+let devisionSumInteger = sumIntegerProducts / 100;
+let roundingToHundredths = Math.ceil(devisionSumInteger) * 100;
 console.log(roundingToHundredths);
 
 
