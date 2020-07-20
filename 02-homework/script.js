@@ -7,7 +7,7 @@ while (Number.isInteger(numberN) == false) {
 
 let numberM = +prompt('Введи ще одне число, до якого ми будем складати');
 
-while (Number.isInteger(numberN) == false) {
+while (Number.isInteger(numberM) == false) {
     alert('Щось пішло не так. Переконайся, що число ціле і є числом:)), та введи ще раз');
     numberM = +prompt('Введи ще одне число, до якого ми будем складати');
 }
