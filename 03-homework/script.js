@@ -219,7 +219,25 @@ function isPalyndrom(word) {
 
 
 
+/* --------------------------------------------#11 FUNCTION-------------------------------------------- */
 
+
+
+let userPhrase = 'Реве та стогне дніпр широкий';
+// let userPhrase = prompt('Type your text');
+
+function deleteDuplicateLetter(phrase) { {
+        let userNewPhrase = '';
+        for (i = 0; i < phrase.length; i++) {
+            if (phrase.lastIndexOf(phrase[i]) == phrase.indexOf(phrase[i])) {
+                userNewPhrase += phrase[i];
+            }
+        }
+        return userNewPhrase;
+    } 
+};
+
+// alert(deleteDuplicateLetter(userPhrase));
 
 
 let finish = `<p>Функція 1: Найбільша цифра в числі ${userNumber} це ${getMaxDigit()};</p>
@@ -231,6 +249,7 @@ let finish = `<p>Функція 1: Найбільша цифра в числі $
 <p>Функція 7: За ${userCurrency} можна купити ${convertCurrency(userCurrency)};</p>
 <p>Функція 8: Твій пароль з ${userLengthPass} символів: ${getRandomPassword(userLengthPass)};</p>
 <p>Функція 9: Якщо в "${userSentence}" видалити усі "${userDeleteLetter}", то отримаємо щось таке: "${deleteLetters(userSentence, userDeleteLetter)}";</p>
-<p>Функція 10: "${userWord2}" - це паліндром? ${isPalyndrom(userWord2)}. А от "${userWord3}" - це ${isPalyndrom(userWord3)};</p>`
+<p>Функція 10: "${userWord2}" - це паліндром? ${isPalyndrom(userWord2)}. А от "${userWord3}" - це ${isPalyndrom(userWord3)};</p>
+<p>Функція 11: "${userPhrase}" після видалення букв, що повторюються: "${deleteDuplicateLetter(userPhrase)}";</p>`
 
 document.writeln(finish);
