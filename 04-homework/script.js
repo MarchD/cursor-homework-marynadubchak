@@ -75,11 +75,11 @@ console.log(markOfStudent);
 
 
 function getRandomMark(arr) {
-    let copyThemes = [...arr];
+    let copyThemes = [];
 
-    for (let i = 0; i < copyThemes.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         let randomNumber = Math.floor(1 + Math.random() * (5 + 1 - 1));
-        copyThemes[i].push(randomNumber);
+        copyThemes[i] = [...arr[i], randomNumber];
     }
     
     return copyThemes;
