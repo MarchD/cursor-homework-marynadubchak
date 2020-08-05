@@ -135,3 +135,52 @@ function getDividedByFive(...numbers) {
 
 console.log('Числа кратні 5-ти: ');
 console.log(getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2, 10, 15));
+
+
+
+/* --------------------------------------------#8 FUNCTION-------------------------------------------- */
+
+
+function replaceBadWords(string) {
+    const badWords = ['shit', 'fuck'];
+
+    let replecar = new RegExp(badWords[0] + '|' +  badWords[1], 'gi');
+    let separate = string.split(' ');
+
+    let censoredString = separate.map(element => element.replace(replecar, '****'));
+
+    censoredString = censoredString.join(' ');
+
+   return censoredString;
+};
+
+
+const stringWithBadWords = 'Are you fucking kidding?'
+console.log('Завдання на цензуру:');
+console.log(replaceBadWords(stringWithBadWords));
+
+
+
+/* --------------------------------------------#9 FUNCTION-------------------------------------------- */
+
+
+function divideByThree(word) {
+    let letters = word.toLowerCase().split('');
+    let arr = [];
+
+    for(let i = 0; i < letters.length; i + 3) {
+        let removed =  letters.splice(i, i + 3);
+        
+        arr.push(removed.join(''));
+    }
+
+    return arr;
+}
+
+let longWord = 'pneumonoultramicroscopicsilicovolcanoconiosis';
+console.log('Дуже довге слово англійською, що розбили на "склади":');
+console.log(divideByThree(longWord));
+
+
+/* --------------------------------------------#10 FUNCTION-------------------------------------------- */
+
