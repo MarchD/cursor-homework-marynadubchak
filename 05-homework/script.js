@@ -21,6 +21,7 @@ function getRandomArray(length, min, max) {
    return arrRandomNumbers;
 }
 
+console.log('Масив випадкових цілих чисел: ');
 console.log(getRandomArray(lengthOfArray, minNumber, maxNumber));
 
 
@@ -51,6 +52,7 @@ function getModa(numbers) {
     return numberToCountList.sort((a, b) => b.count - a.count)[0].number;
 }
 
+console.log('Мода: ');
 console.log(getModa(number));
 
 
@@ -66,6 +68,7 @@ function getAverage(numbers) {
     return (total / integerArr.length).toFixed(2);
 };
 
+console.log('Середнє арифметичне: ');
 console.log(getAverage(number));
 
 
@@ -93,6 +96,7 @@ function getMedian(numbers) {
 
 }
 
+console.log('Медіана: ');
 console.log(getMedian(number));
 
 
@@ -105,6 +109,7 @@ function filterEvenNumbers(...numbers) {
     return oddNumbers;
 }
 
+console.log('Фільтр парних чисел: ');
 console.log(filterEvenNumbers(1, 2, 3, 4, 5, 7, 8, 10));
 
 
@@ -116,6 +121,7 @@ function countPositiveNumbers(...numbers) {
     return (numbers.filter(el => el > 0)).length; 
 }
 
+console.log('Кількість чисел більших за 0: ');
 console.log(countPositiveNumbers(1, -2, 3, -4, -5, 6, -5, -8, 2, 4));
 
 
@@ -127,9 +133,5 @@ function getDividedByFive(...numbers) {
     return numbers.filter(el => (el % 5) == 0);
 }
 
+console.log('Числа кратні 5-ти: ');
 console.log(getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2, 10, 15));
-
-
-
-
-
