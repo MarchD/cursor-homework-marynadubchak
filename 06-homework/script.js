@@ -41,7 +41,7 @@ function getSubjects(student){
     
     return rename;
 }
-console.log('Предмети студентки ' + students[0].name + ' це - ' + getSubjects(students[0]) + ' ;');
+console.log('Предмети студена ' + students[0].name + ' це - ' + getSubjects(students[0]) + ' ;');
 
 
 
@@ -96,7 +96,7 @@ function getStudentsNames(student) {
     return names.sort(); 
 }
 
-console.log('Імена в алфовітному порядку:' + getStudentsNames(students));
+console.log('Імена в алфавітному порядку:' + getStudentsNames(students));
 
 
 /* --------------------------------------------#5 FUNCTION-------------------------------------------- */
