@@ -126,34 +126,55 @@ console.log('Найкращий студент: ' + getBestStudent(students));
 
 /* --------------------------------------------#6 FUNCTION-------------------------------------------- */
 
+// let myWord = 'дужеважкадомашка';
+
+// function calculateWordLetters(word) {
+//     const gotLetters = word.split('');
+
+//     const letterToCountList = [];
+
+//     gotLetters.forEach(el => {
+//         let finder = letterToCountList.find(item => item.letter == el);
+//         if (finder) {
+//             finder.count = finder.count + 1;
+//         } else {
+//             let obj = {
+//                 letter: el,
+//                 count: 1
+//             }
+//             letterToCountList.push(obj);
+//         }
+//     });
+
+//     let obj = {};
+
+//     for(let i = 0; i < letterToCountList.length; i++) {
+//         let key = letterToCountList[i].letter;
+//         obj[key] = letterToCountList[i].count;
+//     }
+//     return JSON.stringify(obj);
+// }
+
+// console.log('Повторення літер: ' + calculateWordLetters(myWord));
+
+/* --------------------------------------------#6 FUNCTION (Более адекватное решение)-------------------------------------------- */
+
 let myWord = 'дужеважкадомашка';
 
 function calculateWordLetters(word) {
     const gotLetters = word.split('');
 
-    const letterToCountList = [];
+    const letterToCount = {};
 
-    gotLetters.forEach(el => {
-        let finder = letterToCountList.find(item => item.letter == el);
-        if (finder) {
-            finder.count = finder.count + 1;
+    gotLetters.forEach(letter => {
+        if (letter in letterToCount) {
+            letterToCount[letter] = letterToCount[letter] + 1;
         } else {
-            let obj = {
-                letter: el,
-                count: 1
-            }
-            letterToCountList.push(obj);
+            letterToCount[letter] = 1;
         }
     });
 
-
-    let obj = {};
-
-    for(let i = 0; i < letterToCountList.length; i++) {
-        let key = letterToCountList[i].letter;
-        obj[key] = letterToCountList[i].count;
-    }
-    return JSON.stringify(obj);
+    return JSON.stringify(letterToCount);
 }
 
 console.log('Повторення літер: ' + calculateWordLetters(myWord));
