@@ -41,7 +41,7 @@ function getSubjects(student){
     
     return rename;
 }
-console.log('Предмети студена ' + students[0].name + ' це - ' + getSubjects(students[0]) + ' ;');
+console.log('Предмети студентки ' + students[0].name + ' це - ' + getSubjects(students[0]) + ' ;');
 
 
 
@@ -77,7 +77,7 @@ function getStudentInfo(student) {
     }
 
     const generalInfo = Object.entries(studentInfo);
-    const getString = JSON.stringify(generalInfo);
+    const getString = generalInfo.join("; ");
 
      return getString;
 }
