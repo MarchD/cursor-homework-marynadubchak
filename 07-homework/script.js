@@ -47,8 +47,8 @@ function getMySalary(country) {
      
     setInterval(() => {
         const randomSalary = Math.floor(1500 + Math.random() * (2000 + 1 - 1500));
-        const taxes = this.tax * randomSalary;
-        const profit = randomSalary - taxes;
+        const taxes = (this.tax * randomSalary).toFixed(2);
+        const profit = (randomSalary - taxes).toFixed(2);
     
         let objectSalary = {
             randomSalary,
