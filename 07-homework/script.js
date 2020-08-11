@@ -21,7 +21,7 @@ console.log(`При зарплаті ${anySalary} ви заплатите ${getM
 
 function getMiddleTaxes(country) {
     const middleTax = (this.tax * this.middleSalary).toFixed(2);
-    console.log(`У середньму ${this.countryName} платить ${middleTax} податків`);
+    console.log(`У середньму ${this.countryName} платить ${middleTax} податку`);
 };
 
 [ukraine, latvia, litva].forEach((country) => getMiddleTaxes.call(country));
@@ -33,7 +33,7 @@ function getMiddleTaxes(country) {
 
 function getTotalTaxes(country) {
     const totalTax = (this.tax * this.middleSalary * this.vacancies).toFixed(2);
-    console.log(`Усього ${this.countryName} платить ${totalTax} податків`);
+    console.log(`Усього ${this.countryName} платить ${totalTax} податку`);
 };
 
 [ukraine, latvia, litva].forEach((country) => getTotalTaxes.call(country));
@@ -47,8 +47,8 @@ function getMySalary(country) {
      
     setInterval(() => {
         const randomSalary = Math.floor(1500 + Math.random() * (2000 + 1 - 1500));
-        const taxes = (this.tax * randomSalary).toFixed(2);
-        const profit = (randomSalary - taxes).toFixed(2);
+        const taxes = +(this.tax * randomSalary).toFixed(2);
+        const profit = +(randomSalary - taxes).toFixed(2);
     
         let objectSalary = {
             randomSalary,
