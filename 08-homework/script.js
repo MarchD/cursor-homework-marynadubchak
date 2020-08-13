@@ -67,21 +67,29 @@ console.log(`Оцінки студента ${student2.fullName}: ${student2.Mark
 console.log(`Середня оцінка студента ${student2.fullName}: ${student2.getAverageMark()}`);
 
 
-/* ---------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------- */
 
-// class BudgetStudent extends Student {
-//     getScholarship() {
-//         if(this.getAverageMark() < 4) {
-//             return console.log(`Твій середній ${this.getAverageMark()}, для стипендії має бути вище 4.0`);
-//         } else if (this.getAverageMark === null) {
-//             return console.log(`Студент більше не навчається у ВНЗ`);
-//         } else {
-//             return console.log(`Ви отримали 1400 грн. стипендії`);
-//         }
-//     }
-// }
+class BudgetStudent extends Student {
+    constructor(course, university, fullName) {
+        super(university, course, fullName);
+        setInterval(() => this.getScholarship(), 30000)
+        }
 
-// const budget = new BudgetStudent('5', 'ОНАЗ', 'Карина');
-// const budget2 = new BudgetStudent('2', 'ОНАЗ', 'Сергій');
-// budget.getScholarship();
-// budget2.getScholarship();
+    getScholarship() {
+        if(this.getAverageMark() < 4) {
+            return console.log(`Середня оцінка студента ${this.fullName} - ${this.getAverageMark()}, для стипендії має бути вище 4.0`);
+        } else if (this.getAverageMark === null) {
+            return console.log(`Студент більше не навчається у ВНЗ`);
+        } else {
+            return console.log(`Cтудент  ${this.fullName} отримав 1400 грн. стипендії`);
+        }
+    }
+
+}
+
+const budget = new BudgetStudent('5', 'ОНАЗ', 'Карина');
+const budget2 = new BudgetStudent('2', 'ОНАЗ', 'Сергій');
+budget2.Marks = 1;
+budget.getScholarship();
+budget2.getScholarship();
+
