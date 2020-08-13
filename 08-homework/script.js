@@ -92,4 +92,3 @@ const budget2 = new BudgetStudent('2', 'ОНАЗ', 'Сергій');
 budget2.Marks = 1;
 budget.getScholarship();
 budget2.getScholarship();
-
