@@ -1,0 +1,49 @@
+html {
+    font-size: 10px;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    background-color: #fffffa;
+}
+
+img {
+    margin-bottom: 2rem;
+    width: 10rem;
+    height: auto;
+    opacity: .6;
+    cursor: pointer;
+    
+}
+
+img.active {
+    
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    opacity: 1;
+}
+
+.pictures {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.picture-container {
+    margin-right: 5rem;
+    text-align: center;
+}
+
+.keyboard {
+    font-size: 30px;
+}
+
