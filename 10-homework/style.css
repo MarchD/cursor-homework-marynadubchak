@@ -32,6 +32,7 @@ img.active {
 
 .pictures {
     display: flex;
+    flex-wrap: wrap;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -44,6 +45,9 @@ img.active {
 }
 
 .keyboard {
-    font-size: 30px;
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
+
+
 
