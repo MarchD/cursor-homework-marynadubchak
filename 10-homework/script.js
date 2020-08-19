@@ -5,24 +5,27 @@ const arrayPictures = Array.from(pictures);
 
 arrayPictures.forEach( (picture, index) => {
     picture.onclick = function() {
-        remove()
+        remove(arrayPictures)
         this.classList.add('active');
-        audios[index].play();
+        play(audios[index]);
     }
 });
 
 document.addEventListener('keydown', function(event) {
-    remove()
+    remove(arrayPictures)
     let picture = document.getElementById(event.keyCode);
     picture.classList.add('active');
     let audio = document.getElementById('audio-' + event.keyCode);
-    audio.play();
+    play(audio);
 });
 
-function remove() {
-    arrayPictures.forEach(el => {
+function remove(array) {
+    array.forEach(el => {
         el.classList.remove('active');
     });
 }
 
+function play(audio) {
+    return playAudio = (audio.paused) ? audio.play() : audio.currentTime = 0;
+}
 
