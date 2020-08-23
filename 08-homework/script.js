@@ -14,25 +14,22 @@ class Student {
     get Marks() {
         if(!this.isDismissed) {
             return this.allMarks;
-        } else {
-            return null;
         }
+        return null;
     } 
 
     set Marks(mark) {
         if(!this.isDismissed) {
             return this.allMarks.push(mark);
-        } else {
-            return null;
         }
+        return null;
     }
 
     getAverageMark() {
         if(this.isDismissed) {
             return null;
         } else {
-            let total = 0;
-            return total = this.allMarks.reduce((total, mark) =>  total + mark) / this.allMarks.length;
+            return this.allMarks.reduce((total, mark) =>  total + mark) / this.allMarks.length;
         }        
     }
 
