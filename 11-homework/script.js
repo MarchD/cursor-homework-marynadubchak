@@ -6,7 +6,6 @@ function getChineseLetters() {
     })
 }
 
-
 function getRandomChinese(length) {
     time = Date.now();
     return new Promise( async (resolve, reject) => {
@@ -20,9 +19,7 @@ function getRandomChinese(length) {
         time = Date.now() - time;
         resolve(result, time);
     })
-
 } 
-
 
 getRandomChinese(4).then(
     result => console.log(`result is: ${result}, time: ${time} ms`), 
