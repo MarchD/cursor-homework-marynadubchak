@@ -10,15 +10,15 @@ function getChineseLetters() {
 function getRandomChinese(length) {
     time = Date.now();
     return new Promise( async (resolve, reject) => {
-    if (length <= 0 ) reject(new Error('Length is smaller than 0'));
-    let i = 0;
-    let result = '';
-    while(i < length) {
-    result += await getChineseLetters();
-        i++;
-    }
-    time = Date.now() - time;
-    resolve(result, time);
+        if (length <= 0 ) reject(new Error('Length is smaller than 0'));
+        let i = 0;
+        let result = '';
+        while(i < length) {
+        result += await getChineseLetters();
+            i++;
+        }
+        time = Date.now() - time;
+        resolve(result, time);
     })
 
 } 
