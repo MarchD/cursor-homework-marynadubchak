@@ -184,3 +184,17 @@ console.log(divideByThree(longWord));
 
 /* --------------------------------------------#10 FUNCTION-------------------------------------------- */
 
+let word = 'bet';
+
+function sort(words) {
+    let word1 = words.split('');
+    let sortWord = word1.sort((a, b) => {
+        console.log(a, b);
+        return a - b;
+    });
+
+    return sortWord;
+} 
+
+console.log(sort(word));
+

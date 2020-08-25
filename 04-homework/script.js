@@ -78,7 +78,7 @@ function getRandomMark(arr) {
     let copyThemes = [];
 
     for (let i = 0; i < arr.length; i++) {
-        let randomNumber = Math.floor(1 + Math.random() * (5 + 1 - 1));
+        let randomNumber = Math.floor(min + Math.random() * (max + min - 1));
         copyThemes[i] = [...arr[i], randomNumber];
     }
     
