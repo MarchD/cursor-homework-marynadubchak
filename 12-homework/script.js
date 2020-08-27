@@ -10,6 +10,7 @@ function getUrlCharacters(number) {
     }
     return axios(config)
         .then((res) => {
+            console.log(res.data);
             return res.data.characters;
         })
         .catch(() => {
@@ -59,7 +60,7 @@ function getCharactersInfo(url) {
     url.forEach((url) => {
         const config = {
             method: 'GET',
-            url: url,
+            url: `https://${url.slice(4)}`,
         }
         return axios(config)
             .then((res) => {
