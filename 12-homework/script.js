@@ -60,7 +60,7 @@ function getCharactersInfo(url) {
     url.forEach((url) => {
         const config = {
             method: 'GET',
-            url: `https://${url.slice(4)}`,
+            url: `https${url.slice(4)}`,
         }
         return axios(config)
             .then((res) => {
