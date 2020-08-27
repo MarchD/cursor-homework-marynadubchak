@@ -1,0 +1,202 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    background-color: #0C1D2F;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 900;
+    overflow-x: hidden;
+}
+
+p {
+    margin: 0;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: content-box;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+    color: #ffc500;
+    font-size: 3rem;
+}
+
+input {
+    margin-bottom: 2rem;
+    padding: 0.5rem 1rem;
+    width: 80%;
+    height: 4rem;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
+    color: #000;
+    border-radius: 5px;
+}
+
+.button {
+    padding: 1rem 3rem;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    background-color: #ffc500;
+    border: 1px solid #a98b00;
+    border-radius: 5px;
+    transition: background-color .3s linear;
+    cursor: pointer;
+}
+
+.button:last-child {
+    margin-left: 1rem;
+}
+
+.button:hover {
+    background-color: #ffc160;
+}
+
+.intro {
+    margin: 4rem 0;
+    text-align: center;
+}
+
+.logo {
+    max-width: 60rem;
+    font-size: 7rem;
+    color: #ffc500;
+    filter: drop-shadow(0 0 15px rgba(255, 245, 111, 0.5));
+}
+
+.films {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.films-inner {
+    width: 100%;
+}
+
+.films-buttons {
+    margin-top: 2rem;
+}
+
+.characters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.character {
+    flex-basis: 10rem;
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    position: relative;
+}
+
+
+.char-name {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.char-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.svg {
+    margin-left: 1rem;
+    width: 3rem;
+}
+
+.char-year {
+    font-size: 1.5rem;
+    color: #276886;
+}
+
+.char-gender {
+    font-size: 1.5rem;
+}
+
+.char-img {
+    position: relative;
+    margin-bottom: 2rem;
+    width: 20rem;
+    height: 20rem;
+    overflow: hidden;
+    border-radius: 50%;
+    background: rgb(255,197,0);
+    background: radial-gradient(circle, rgba(255,197,0,1) 0%, rgba(255,197,0,0.35057773109243695) 50%, rgba(255,197,0,0.01) 100%);
+}
+
+.img {
+    max-width: 20rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.planets {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #ffc500;
+    text-shadow: 0 0 15px rgba(255, 245, 111, 0.5);
+}
+
+.planets-btn {
+    text-align: center
+}
+
+.planet {
+
+    text-align: center;
+    text-shadow: 0 3px 5px 3px rgba(0,0,0,.13);
+}
+.planets-btns {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+#prev, #next {
+    display: none;
+}
+
+.ship {
+    width: 10rem;
+    position: absolute;
+    top:0;
+    left:0;
+    animation: fly 8s forwards;
+    transition: scale 5s linear;
+    z-index: -10;
+}
+
+@keyframes fly{
+    0%{
+        top:50px;
+        left:-200px;
+    }
+    100%{
+        top:200px;
+        left: calc(100% + 200px);
+    }
+
+}

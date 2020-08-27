@@ -3,10 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Star Wars</title>
 </head>
 <body>
-    <script src="script.js"></script>
-    
+
+<div class="intro">
+    <div class="container">
+        <img class="logo" src="img/logo.png" alt="star wars">
+    </div>
+</div>
+
+
+<div class="films">
+    <div class="container">
+        <div class="films-inner">
+            <form name="searchFilm">
+                <input placeholder="Type a number of film" name="numberOfFilm" type="text">
+                <div class="films-buttons">
+                    <button id="infoCharacters" type="button" class="button">Get info about characters</button>
+                    <button id='hide' class="button" type="button">Hide</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="characters"></div>
+</div>
+
+
+<div class="container">
+    <div class="planets-btn">
+        <button id="listOfPlanets" class="button"> List of Planets</button>
+    </div>
+    <div class="planets"></div>
+    <div class="planets-btns">
+        <button id="prev" class="button">Prev</button>
+        <button id="next" class="button">Next</button>
+    </div>
+</div>
+
+<img src="img/ship.png" alt="ship" class="ship">
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
