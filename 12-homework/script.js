@@ -6,7 +6,7 @@ function getUrlCharacters(number) {
     container.innerHTML = '';
     const config = {
         method: 'GET',
-        url: `${BASE}films/${number}`
+        url: `${BASE}films/${number}`,
     }
     return axios(config)
         .then((res) => {
@@ -27,13 +27,13 @@ function renderCharacter(char) {
         charImg.className = 'char-img';
         switch (char.gender) {
             case 'male':
-                char.gender = `<img class="svg" src="img/male.svg">`;
+                char.gender = `<img alt="male" class="svg" src="img/male.svg">`;
                 break;
             case 'female':
-                char.gender = `<img class="svg" src="img/female.svg">`;
+                char.gender = `<img alt="female" class="svg" src="img/female.svg">`;
                 break;
             default:
-                char.gender = `<img class="svg" src="img/unk.svg">`;
+                char.gender = `<img alt="unknown" class="svg" src="img/unk.svg">`;
         }
         charElement.innerHTML = `
             <h2 class="char-name">${char.name}</h2>
@@ -58,7 +58,7 @@ function renderCharacter(char) {
 function getCharactersInfo(url) {
 
     url.forEach((url) => {
-        url = 'https' + url.slice(4);
+        url = `https${url.slice(4)}`;
         const config = {
             method: 'GET',
             url: url,
@@ -95,7 +95,7 @@ function getInfo() {
 function getPlanets(page) {
     const config = {
         method: 'GET',
-        url: BASE + 'planets/',
+        url: `${BASE}planets/`,
         params: {
             page: page
         },
@@ -135,8 +135,8 @@ function renderPlanets(planets) {
             container.append(planetElement);
         })
 
-        document.getElementById('prev').style.display = 'block';;
-        document.getElementById('next').style.display = 'block';;
+        document.getElementById('prev').style.display = 'block';
+        document.getElementById('next').style.display = 'block';
 }
 
 function removePlanets() {
