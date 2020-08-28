@@ -58,13 +58,13 @@ function renderCharacter(char) {
 function getCharactersInfo(url) {
 
     url.forEach((url) => {
+        url = 'https' + url.slice(4);
         const config = {
             method: 'GET',
-            url: `https${url.slice(4)}`,
+            url: url,
         }
         return axios(config)
             .then((res) => {
-                console.log(res.data)
                 return res.data;
             }).then(renderCharacter);
     })
