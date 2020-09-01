@@ -1,0 +1,35 @@
+body {
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+button {
+    font-family: 'Libre Franklin', sans-serif;
+    border: 2px solid #660000;
+    border-radius: 3px;
+    padding: 10px 15px;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.id {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    min-height: 200px;
+}
+
+.buttons-fonts {
+    text-align: center;
+}
