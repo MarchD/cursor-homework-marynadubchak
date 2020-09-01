@@ -35,13 +35,24 @@ function fontDown() {
 function newFontGenerator(size) {
     return {
         next(state) {
+            if (size < 5) {
+                return {value: size = 5, done: false}
+            } else if (size > 100) {
+                return {value: size = 99, done: false}
+                }
+
             if (state == 'up') {
-                return {value: size = size + 2, done: false}
-            }
-            return {value: size = size - 2, done: false}
+                return {
+                    value: size = size + 2,
+                    done: false
+                }}
+            return {
+                value: size = size - 2,
+                done: false
             }
         }
     }
+}
 
 getClick()
 fontUp();
