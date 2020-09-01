@@ -4,9 +4,19 @@ body {
 
 button {
     font-family: 'Libre Franklin', sans-serif;
-    border: 2px solid #660000;
+    color: #fff;
+    font-size: 25px;
+    min-width: 100px;
+    background-color: #276886;
+    border: 0;
     border-radius: 3px;
     padding: 10px 15px;
+    opacity: .7;
+    transition: opacity .2s linear;
+}
+
+button:hover {
+    opacity: 1;
 }
 
 .container {
@@ -24,6 +34,8 @@ button {
 
 .div {
     display: flex;
+    color: #1f6588;
+    text-shadow: 0 0 20px rgb(31, 101, 135);
     align-items: center;
     justify-content: center;
     min-width: 200px;
