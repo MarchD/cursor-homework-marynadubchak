@@ -28,4 +28,3 @@ function remove(array) {
 function play(audio) {
     return playAudio = (audio.paused) ? audio.play() : audio.currentTime = 0;
 }
-

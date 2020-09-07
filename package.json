@@ -1,0 +1,37 @@
+{
+  "name": "cursor-homework-marynadubchak",
+  "version": "1.0.0",
+  "description": "webpack hw",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "browserslist": "> 0.25%, not dead",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarchD/cursor-homework-marynadubchak.git"
+  },
+  "author": "Maryna Dubchak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarchD/cursor-homework-marynadubchak/issues"
+  },
+  "homepage": "https://github.com/MarchD/cursor-homework-marynadubchak#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^4.2.2",
+    "file-loader": "^6.1.0",
+    "html-webpack-plugin": "^4.4.1",
+    "style-loader": "^1.2.1",
+    "svg-inline-loader": "^0.8.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.11.5"
+  }
+}
