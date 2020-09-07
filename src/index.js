@@ -10,5 +10,5 @@ import './hw9/hw9.css'
 import './assets/1.png'
 
 
-document.querySelector('.title').innerHTML = `<h2>HW#10</h2>`;
+document.querySelector('.title').innerHTML = `<h2>HW#9</h2>`;
 hw9();
